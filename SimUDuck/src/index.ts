@@ -11,6 +11,6 @@ const simulatorOutputs = [
 
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `
-<h1>SimUDuck</h1>
-<div>${simulatorOutputs.join('</br>')}</div>
+    <h1>SimUDuck</h1>
+    <div>${simulatorOutputs.join('</br>')}</div>
 `;
