@@ -18,4 +18,12 @@ export default abstract class Duck {
     public swim(): string {
         return 'All ducks float!';
     }
+
+    public setFlyBehavior(flyBehavior: FlyBehavior): void {
+        this.flyBehavior = flyBehavior;
+    }
+
+    public setQuackBehavior(quackBehavior: QuackBehavior): void {
+        this.quackBehavior = quackBehavior;
+    }
 }
