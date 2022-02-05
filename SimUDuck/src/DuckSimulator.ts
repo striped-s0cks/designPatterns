@@ -1,26 +1,26 @@
 import Duck from "./Duck";
 import MallardDuck from "./Ducks/MallardDuck";
+import ModelDuck from "./Ducks/ModelDuck";
+import FlyRocketPowered from "./FlyBehaviors/FlyRocketPowered";
 
 export default class DuckSimulator {
-    private mallard: Duck;
+    runSimulation(): string[] {
+        const logs: string[] = [];
 
-    constructor() {
-        this.mallard = new MallardDuck();
-    }
+        const mallard = new MallardDuck();
+        logs.push(mallard.display());
+        logs.push(mallard.performQuack());
+        logs.push(mallard.performFly());
+        logs.push(mallard.swim());
+        logs.push('------------------')
 
-    simulateDisplay(): string {
-        return this.mallard.display();
-    }
+        const model = new ModelDuck();
+        logs.push(model.display());
+        logs.push(model.performQuack());
+        logs.push(model.performFly());
+        model.setFlyBehavior(new FlyRocketPowered());
+        logs.push(model.performFly());
 
-    simulateFly(): string {
-        return this.mallard.performFly();
-    }
-
-    simulateQuack(): string {
-        return this.mallard.performQuack();
-    }
-
-    simulateSwim(): string {
-        return this.mallard.swim();
+        return logs;
     }
 }
