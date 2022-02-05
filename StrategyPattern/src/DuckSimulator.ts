@@ -17,6 +17,7 @@ export default class DuckSimulator {
         logs.push(model.display());
         logs.push(model.performQuack());
         logs.push(model.performFly());
+        logs.push('<< updating fly behavior dynamically... >>')
         model.setFlyBehavior(new FlyRocketPowered());
         logs.push(model.performFly());
 
