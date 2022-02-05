@@ -1,4 +1,3 @@
-import Duck from "./Duck";
 import MallardDuck from "./Ducks/MallardDuck";
 import ModelDuck from "./Ducks/ModelDuck";
 import FlyRocketPowered from "./FlyBehaviors/FlyRocketPowered";

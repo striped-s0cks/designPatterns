@@ -4,7 +4,7 @@ module.exports = {
     // multiple entry points
     // format = [output path]: [input path]
     entry: {
-        './SimUDuck/dist/bundle': './SimUDuck/src/index.ts'
+        './StrategyPattern/dist/bundle': './StrategyPattern/src/index.ts'
     },
     devtool: 'inline-source-map',
     module: {
